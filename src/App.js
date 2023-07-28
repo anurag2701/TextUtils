@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "./App.css";
-import About from "./components/About";
+// import About from "./components/About";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import Alert from "./components/Alert";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import PageNotFound from "./pages/PageNotFound";
+// import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import PageNotFound from "./pages/PageNotFound";
 
 function App(props) {
   const [mode, setMode] = useState("light");
@@ -37,17 +37,18 @@ function App(props) {
     <>
       <Navbar mode={mode} toggleMode={toggleMode} />
       <Alert alertText={alertText} />
-      <div className="container my-3">
+      {/* <div className="container my-3">
         <BrowserRouter>
-          <Routes>
+          <Routes> */}
             {/* <Route path='Path You want to use' element={<What you want to render >}/>  */}
-            <Route exact path="/about" element={<About />}></Route>
+           {/* <Route exact path="/about" element={<About />}></Route>
             <Route exact path="/" element={<TextForm mode={mode} heading="TextUtils" showAlert={showAlert} />}></Route>
             <Route path="*" element={<PageNotFound/>}></Route>
-          </Routes>
+           </Routes>
         </BrowserRouter>
-      </div>
+      </div> */}
 
+      <TextForm mode={mode} heading="TextUtils" showAlert={showAlert} />
       {/* Old code */}
       {/* 
         <TextForm mode={mode} heading="TextUtils" showAlert={showAlert} />

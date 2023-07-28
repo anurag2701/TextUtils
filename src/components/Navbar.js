@@ -26,11 +26,11 @@ export default function Navbar(props) {
                   Home
                 </a>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <a className="nav-link" href="/about">
                   About
                 </a>
-              </li>
+              </li> */}
             </ul>
             <div className={`form-check form-switch mx-3 text-${props.mode === "light" ? "dark" : "light"}`}>
               <input
